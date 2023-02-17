@@ -58,6 +58,7 @@
         <module>galaxy-webclient</module>
         <module>galaxy-retry</module>
         <module>galaxy-notify-center</module>
+        <module>galaxy-distributed-cache</module>
     </modules>
 
     <properties>

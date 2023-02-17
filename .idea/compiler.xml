@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="galaxy-util" />
         <module name="galaxy-retry" />
+        <module name="galaxy-distributed-cache" />
         <module name="galaxy-global-search" />
         <module name="galaxy-integration-k8s" />
         <module name="galaxy-notify-center" />
@@ -38,6 +39,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="galaxy-common" options="-parameters" />
       <module name="galaxy-data-permission" options="-parameters" />
+      <module name="galaxy-distributed-cache" options="-parameters" />
       <module name="galaxy-distributed-job" options="-parameters" />
       <module name="galaxy-distributed-limit" options="-parameters" />
       <module name="galaxy-distributed-lock" options="-parameters" />
