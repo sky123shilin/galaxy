@@ -1,0 +1,57 @@
+# 服务端口
+server:
+  port: 9902
+
+# 服务名称
+spring:
+  application:
+    name: galaxy-web-02
+  datasource:
+    hikari: # 数据源配置
+      jdbc-url: jdbc:mysql://localhost:3306/galaxy?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      minimum-idle: 1
+      maximum-pool-size: 15
+      auto-commit: true
+      idle-timeout: 60000
+      pool-name: mysql_pool
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+
+# eureka相关配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8090/eureka
+  instance:
+    prefer-ip-address: true
+
+# feign相关配置
+feign:
+  compression: # 开启gzip压缩配置
+    request:
+      enabled: true
+      mime-types: text/xml,application/xml,application/json
+      min-request-size: 512
+    response:
+      enabled: true
+  circuitbreaker:
+    enabled: true
+
+# feign中替换url connection为okhttp
+
+
+
+
+
+
+
+
+# mybatis-plus相关配置
+#mybatis-plus:
+#  mapper-locations: mapper/*.xml
+#  configuration:
+#    map-underscore-to-camel-case: true

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.galaxy</groupId>
+    <artifactId>galaxy-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging><!--父模块打包类型必须为pom-->
+
+    <!-- parent指明继承关系，给出被继承的父项目的具体信息-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.6.1</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <!-- 子模块列表  -->
+    <modules>
+        <!--全局工具类-->
+        <module>galaxy-util</module>
+        <!--全局通用类-->
+        <module>galaxy-common</module>
+        <!--全局日志类-->
+        <module>galaxy-logging</module>
+        <!--分布式锁-->
+        <module>galaxy-distributed-lock</module>
+        <!--分布式限流-->
+        <module>galaxy-distributed-limit</module>
+        <!--与Kafka集成-->
+        <module>galaxy-kafka</module>
+        <!--分布式任务-->
+        <module>galaxy-distributed-job</module>
+        <!--注册中心Eureka-->
+        <module>galaxy-registry-eureka</module>
+        <!--Webflux服务01-->
+        <module>galaxy-webflux-01</module>
+        <!--结合mybatis完成数据权限-->
+        <module>galaxy-data-permission</module>
+        <!--结合mybatis完成多数据源，比如说mysql和clickhouse-->
+        <module>galaxy-multi-datasource-mybatis</module>
+        <!--服务网关，使用spring cloud gateway来实现-->
+        <module>galaxy-gateway</module>
+        <!--Web服务01-->
+        <module>galaxy-web-01</module>
+        <!--Web服务02-->
+        <module>galaxy-web-02</module>
+        <!--使用elasticsearch实现全局搜索-->
+        <module>galaxy-global-search</module>
+        <!--集成spring batch-->
+        <module>galaxy-spring-batch</module>
+        <!--集成spring event-->
+        <module>galaxy-spring-event</module>
+        <!--利用spring cloud kubernetes集成kubernetes-->
+        <module>galaxy-integration-k8s</module>
+        <module>galaxy-webclient</module>
+        <module>galaxy-retry</module>
+        <module>galaxy-notify-center</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <spring-boot.version>2.6.1</spring-boot.version>
+        <spring-cloud.version>2021.0.0</spring-cloud.version>
+        <guava.version>28.0-jre</guava.version>
+        <jackson-bom.version>2.13.0</jackson-bom.version>
+        <hutool.version>5.5.0</hutool.version>
+        <lombok.version>1.18.24</lombok.version>
+        <mybatis.plus.version>3.4.0</mybatis.plus.version>
+    </properties>
+
+    <!--  dependencyManagement的作用其实相当于一个对所依赖jar包进行版本管理的管理器  -->
+    <!--  dependencyManagement里只是声明依赖，并不实现引入，因此子项目需要显示的声明需要用的依赖。如果不在子项目中声明依赖，是不会从父项目中继承下来的；只有在子项目中写了该依赖项，并且没有指定具体版本，才会从父项目中继承该项，并且version和scope都读取自父pom;另外如果子项目中指定了版本号，那么会使用子项目中指定的jar版本。  -->
+    <dependencyManagement>
+        <dependencies>
+<!--      引入spring-boot-dependencies，统一所有spring-boot相关版本      -->
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-dependencies</artifactId>-->
+<!--                <version>${spring-boot.version}</version>-->
+<!--                <type>pom</type>-->
+<!--                <scope>import</scope>-->
+<!--            </dependency>-->
+
+            <!--     引入spring-cloud-dependencies，统一所有spring-cloud相关组件版本，这里采用的spring-cloud版本是2021.0.0，官网说明对应的spring-boot版本是2.6.1     -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!--    引入google的guava工具类    -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+
+            <!--    引入hutool工具类    -->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+
+            <!--    引入mybatis-plus框架    -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis.plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>${mybatis.plus.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+
+        <!--   引入jackson相关依赖，版本指定来自于 spring-boot-starter-parent => spring-boot-dependencies => jackson-bom中    -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+
+        <!-- 引入lombok，在各个子项目中都会使用到，所以这里没有放到dependencyManagement标签中，放到这里全局引入 -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+
+    </dependencies>
+
+    <!-- 开发者信息 -->
+    <developers>
+        <developer>
+            <name>Shilin</name>
+            <id>Shilin.Qu</id>
+            <email>sky123shilin@outlook.com</email>
+            <roles>
+                <role>Developer</role>
+            </roles>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
+
+<!-- 该插件作用是打一个可运行的包，必须要写在需要打包的项目里。这里的父模块不需要打包运行，所以删掉该插件 -->
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </build>-->
+</project>

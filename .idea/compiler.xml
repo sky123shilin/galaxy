@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="galaxy-util" />
+        <module name="galaxy-retry" />
+        <module name="galaxy-global-search" />
+        <module name="galaxy-integration-k8s" />
+        <module name="galaxy-notify-center" />
+        <module name="galaxy-web-02" />
+        <module name="galaxy-gateway" />
+        <module name="galaxy-multi-datasource-mybatis" />
+        <module name="galaxy-web-01" />
+        <module name="galaxy-kafka" />
+        <module name="galaxy-spring-batch" />
+        <module name="galaxy-webclient" />
+        <module name="galaxy-distributed-lock" />
+        <module name="galaxy-distributed-limit" />
+        <module name="galaxy-distributed-job" />
+        <module name="galaxy-common" />
+        <module name="galaxy-registry-eureka" />
+        <module name="galaxy-spring-event" />
+        <module name="galaxy-data-permission" />
+        <module name="galaxy-webflux-01" />
+        <module name="galaxy-logging" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="galaxy-mq-rocketmq" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="galaxy-common" options="-parameters" />
+      <module name="galaxy-data-permission" options="-parameters" />
+      <module name="galaxy-distributed-job" options="-parameters" />
+      <module name="galaxy-distributed-limit" options="-parameters" />
+      <module name="galaxy-distributed-lock" options="-parameters" />
+      <module name="galaxy-gateway" options="-parameters" />
+      <module name="galaxy-global-search" options="-parameters" />
+      <module name="galaxy-integration-k8s" options="-parameters" />
+      <module name="galaxy-kafka" options="-parameters" />
+      <module name="galaxy-logging" options="-parameters" />
+      <module name="galaxy-mq-rocketmq" options="-parameters" />
+      <module name="galaxy-multi-datasource-mybatis" options="-parameters" />
+      <module name="galaxy-notify-center" options="-parameters" />
+      <module name="galaxy-registry-eureka" options="-parameters" />
+      <module name="galaxy-retry" options="-parameters" />
+      <module name="galaxy-spring-batch" options="-parameters" />
+      <module name="galaxy-spring-event" options="-parameters" />
+      <module name="galaxy-util" options="-parameters" />
+      <module name="galaxy-web-01" options="-parameters" />
+      <module name="galaxy-web-02" options="-parameters" />
+      <module name="galaxy-webclient" options="-parameters" />
+      <module name="galaxy-webflux-01" options="-parameters" />
+    </option>
+  </component>
+</project>

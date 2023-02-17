@@ -1,0 +1,21 @@
+# 服务端口
+server:
+  port: 8090
+
+# 服务名称
+spring:
+  application:
+    name: galaxy-registry-eureka
+
+# eureka相关配置
+eureka:
+  client:
+    fetch-registry: false # 是否从其他的服务中心同步服务列表
+    register-with-eureka: false # 是否把自己作为服务注册到其他服务注册中心
+    service-url:
+      defaultZone: http://localhost:8090/eureka # eureka url
+  instance:
+    hostname: galaxy-registry-eureka
+  server:
+    enable-self-preservation: false # 关闭eureka的自我保护机制
+    eviction-interval-timer-in-ms: 10000

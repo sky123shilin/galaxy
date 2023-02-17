@@ -1,0 +1,6 @@
+com/galaxy/web/domain/User.class
+com/galaxy/web/controller/UserController.class
+com/galaxy/web/domain/User$UserBuilder.class
+com/galaxy/web/GalaxyWebApplication.class
+com/galaxy/web/service/UserService.class
+com/galaxy/web/service/impl/UserServiceImpl.class
