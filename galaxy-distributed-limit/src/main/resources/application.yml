@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: galaxy-limit
+  redis:
+    host: 127.0.0.1
+    password: xxx
+    database: 0
+    timeout: 3000
+
+server:
+  port: 8999

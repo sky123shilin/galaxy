@@ -1,0 +1,77 @@
+算法分类
+
+一、单向散列算法： 属于摘要算法，不是一种加密算法，作用是把任意长的输入消息串变化成固定长的输出串的一种函数
+
+BASE64（严格地说，属于编码格式，而非加密算法）
+MD5（Message Digest algorithm 5，信息摘要算法）
+SHA（Secure Hash Algorithm，安全散列算法）
+HMAC（Hash Message Authentication Code，散列消息鉴别码）
+CRC（Cyclical Redundancy Check，循环冗余码校验）
+
+常用：BASE64、MD5、SHA、HMAC
+
+二、对称加密算法： 加密密钥与解密密钥相同
+
+DES（Data Encryption Standard，数据加密标准算法）
+AES（Advanced Encryption Standard，高级加密标准）
+PBE（Password-based encryption，基于密码验证）
+RC5（参数可变的分组密码算法 ）
+BLOWFISH（对称密钥分组加密算法）
+
+常用：DES、AES
+
+三、非对称加密算法 ：加密密钥与解密密钥不相同
+
+RSA（算法的名字以发明者的名字命名：Ron Rivest, AdiShamir 和Leonard Adleman）
+DH（Diffie-Hellman算法，密钥一致协议）
+DSA（Digital Signature Algorithm，数字签名）
+ECC（Elliptic Curves Cryptography，椭圆曲线算法）
+Elgamal（既能用于数据加密也能用于数字签名）
+Merkle-Hellman（背包算法）
+Miller Rabin算法（素数测试算法）
+
+常用：RSA、DSA、ECC、DH
+
+用户密码加密方式：
+
+1.使用对称加密算法例如DES、AES
+使用这种方式加密是可以通过解密来还原出原始密码的，当然前提条件是需要获取到密钥。不过既然大量的用户信息已经泄露了，密钥很可能也会泄露，
+当然可以将一般数据和密钥分开存储、分开管理，但要完全保护好密钥也是一件非常复杂的事情，所以这种方式并不是很好的方式。
+
+2.单向散列算法例如MD5、SHA
+使用这些算法后，无法通过计算还原出原始密码，而且实现比较简单，因此很多互联网公司都采用这种方式保存用户密码，曾经这种方式也是比较安全的方式，
+但随着彩虹表技术的兴起，可以建立彩虹表进行查表破解，目前这种方式已经很不安全了。
+
+3.PBKDF2算法
+该算法原理大致相当于在HASH算法基础上增加随机盐，并进行多次HASH运算，随机盐使得彩虹表的建表难度大幅增加，而多次HASH也使得建表和破解的难度都大幅增加。
+在使用PBKDF2算法时，HASH一般会选用sha1或者sha256，随机盐的长度一般不能少于8字节，HASH次数至少也要1000次，这样安全性才足够高。
+一次密码验证过程进行1000次HASH运算，对服务器来说可能只需要1ms，但对于破解者来说计算成本增加了1000倍，而至少8字节随机盐，更是把建表难度提升了N个数量级，
+使得大批量的破解密码几乎不可行，该算法也是美国国家标准与技术研究院推荐使用的算法。
+
+4.bcrypt、scrypt等算法
+这两种算法也可以有效抵御彩虹表，使用这两种算法时也需要指定相应的参数，使破解难度增加。
+在密码学中，scrypt(念作“ess crypt”)是Colin Percival于2009年所发明的金钥推衍函数，当初设计用在他所创立的Tarsnap服务上。设计时考虑到大规模的客制硬件攻击而刻意设计需要大量内存运算。
+Scrypt不仅计算所需时间长，而且占用的内存也多，使得并行计算多个摘要异常困难，因此利 用rainbow table进行暴力攻击更加困难。
+Scrypt没有在生产环境中大规模应用，并且缺乏仔细的审察和广泛的函数库支持。但是，Scrypt在算法层面只要没有破绽，它的安全性应该高于PBKDF2和bcrypt。
+
+
+Hmac
+
+Hmac，全称为“Hash Message Authentication Code”，中文名“散列消息鉴别码”，主要是利用哈希算法，以一个密钥和一个消息为输入，生成一个消息摘要作为输出。
+一般的，消息鉴别码用于验证传输于两个共同享有一个密钥的单位之间的消息。
+Hmac可以与任何迭代散列函数捆绑使用。MD5 和 SHA-1 就是这种散列函数。HMAC 还可以使用一个用于计算和确认消息鉴别值的密钥。
+与散列函数的结合有如下组合方式
+HmacMD5
+HmacSHA1
+HmacSHA224
+HmacSHA256
+HmacSHA384
+HmacSHA512
+
+HmacMD5可以看作带有一个安全的key的MD5。使用HmacMD5而不是用MD5加salt，有如下好处：
+    HmacMD5使用的key长度是64字节，更安全；
+    Hmac是标准算法，同样适用于SHA-1等其他哈希算法；
+    Hmac输出和原有的哈希算法长度一致。
+
+
+

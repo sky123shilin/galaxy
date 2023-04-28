@@ -17,7 +17,6 @@ public class IpUtils {
     private static final String ANY_HOST = "0.0.0.0";
     private static final String LOCAL_HOST = "127.0.0.1";
     private static final Pattern IP_PATTERN = Pattern.compile("\\d{1,3}(\\.\\d{1,3}){3,5}$");
-
     private static volatile InetAddress LOCAL_ADDRESS = null;
 
     /**
@@ -203,7 +202,6 @@ public class IpUtils {
         ServerSocket serverSocket = null;
         try {
             serverSocket = new ServerSocket(port);
-            used = false;
         } catch (IOException e) {
             used = true;
         } finally {

@@ -3,31 +3,71 @@
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/galaxy-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/galaxy-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-curator-zookeeper/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-curator-zookeeper/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/galaxy-data-permission/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-data-permission/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/galaxy-distributed-cache/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-distributed-cache/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-distributed-database/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-distributed-database/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-distributed-fs-minio/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-distributed-fs-minio/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-distributed-id/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-distributed-id/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/galaxy-distributed-job/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-distributed-job/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/galaxy-distributed-limit/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-distributed-limit/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/galaxy-distributed-lock/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-distributed-lock/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/galaxy-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-gateway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/galaxy-global-search/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-global-search/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-import-center/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-import-center/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/galaxy-integration-k8s/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-integration-k8s/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/galaxy-kafka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-kafka/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/galaxy-logging/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/galaxy-logging/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/galaxy-multi-datasource-mybatis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-multi-datasource-mybatis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-netty4/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-netty4/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/galaxy-notify-center/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-notify-center/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-openapi-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-openapi-gateway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/galaxy-registry-eureka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-registry-eureka/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/galaxy-registry-eureka/src/main/resources/application.yml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/galaxy-retry/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-retry/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-security/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-security/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/galaxy-spring-batch/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-spring-batch/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/galaxy-spring-event/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-spring-event/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-spring-integration/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-spring-integration/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-spring-session/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-spring-session/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/galaxy-util/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/galaxy-util/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/galaxy-web-01/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-web-01/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/galaxy-web-02/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/galaxy-web-02/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-web/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/galaxy-webclient/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-webclient/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/galaxy-webflux-01/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/galaxy-webflux-01/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>

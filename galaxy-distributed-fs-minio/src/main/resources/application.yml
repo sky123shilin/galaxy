@@ -1,0 +1,12 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: galaxy-fs
+
+minio:
+  endpoint: http://127.0.0.1:9000
+  accessKey: N7Byzp0aoQMfqLhy
+  secretKey: aIDtVmoS4jUWC1dPQAHNxRHoN6QuSgZU
+  bucketName: qsl-bucket

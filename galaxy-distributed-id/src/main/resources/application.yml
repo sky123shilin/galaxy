@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: galaxy-distributed-id
+  redis:
+    host: 192.168.153.131
+    port: 6379
+    database: 0
+    password: 123456
+    connect-timeout: 5000
+    timeout: 5000

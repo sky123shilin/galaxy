@@ -55,10 +55,29 @@
         <module>galaxy-spring-event</module>
         <!--利用spring cloud kubernetes集成kubernetes-->
         <module>galaxy-integration-k8s</module>
+        <!--利用新提供的webclient来发送请求-->
         <module>galaxy-webclient</module>
+        <!--重试的两种写法，利用spring-retry和guava的retry-->
         <module>galaxy-retry</module>
+        <!--通知中心，包括短信、邮件、钉钉、企微、推送-->
         <module>galaxy-notify-center</module>
+        <!--分布式缓存-->
         <module>galaxy-distributed-cache</module>
+        <!--netty的深入学习-->
+        <module>galaxy-netty4</module>
+        <!--利用spring security模块来认证授权-->
+        <module>galaxy-security</module>
+        <!--集成spring session，结合redis，解决session在负载情况下分布式问题-->
+        <module>galaxy-spring-session</module>
+        <!--openapi网关，企业对外交互的入口-->
+        <module>galaxy-openapi-gateway</module>
+        <module>galaxy-spring-integration</module>
+        <module>galaxy-distributed-id</module>
+        <module>galaxy-distributed-database</module>
+        <module>galaxy-curator-zookeeper</module>
+        <module>galaxy-distributed-fs-minio</module>
+        <module>galaxy-web</module>
+        <module>galaxy-import-center</module>
     </modules>
 
     <properties>
@@ -72,6 +91,7 @@
         <hutool.version>5.5.0</hutool.version>
         <lombok.version>1.18.24</lombok.version>
         <mybatis.plus.version>3.4.0</mybatis.plus.version>
+        <fastjson.version>2.0.26</fastjson.version>
     </properties>
 
     <!--  dependencyManagement的作用其实相当于一个对所依赖jar包进行版本管理的管理器  -->
@@ -108,6 +128,13 @@
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-all</artifactId>
                 <version>${hutool.version}</version>
+            </dependency>
+
+            <!--    引入FastJson    -->
+            <dependency>
+                <groupId>com.alibaba.fastjson2</groupId>
+                <artifactId>fastjson2</artifactId>
+                <version>${fastjson.version}</version>
             </dependency>
 
             <!--    引入mybatis-plus框架    -->

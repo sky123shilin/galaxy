@@ -49,6 +49,11 @@
 			<artifactId>hutool-all</artifactId>
 		</dependency>
 
+		<!--   引入hutool工具类-->
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-all</artifactId>
+		</dependency>
 	</dependencies>
 
 </project>

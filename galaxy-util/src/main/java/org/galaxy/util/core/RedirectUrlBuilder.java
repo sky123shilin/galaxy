@@ -50,7 +50,7 @@ public class RedirectUrlBuilder {
         this.query = query;
     }
 
-    public String getUrl() {
+    public String build() {
         StringBuilder sb = new StringBuilder();
         Assert.notNull(this.scheme, "scheme cannot be null");
         Assert.notNull(this.serverName, "serverName cannot be null");

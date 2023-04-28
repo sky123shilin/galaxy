@@ -1,0 +1,22 @@
+server:
+  port: 8902
+spring:
+  application:
+    name: galaxy-distributed-job
+
+# elastic-job配置
+elasticjob:
+  reg-center:
+    server-lists: 192.168.153.134:2181
+    namespace: test
+    session-timeout-milliseconds: 600000
+    connection-timeout-milliseconds: 600000
+    max-sleep-time-milliseconds: 30000
+    base-sleep-time-milliseconds: 10000
+  jobs:
+    galaxySimpleJob:
+      elastic-job-class: org.galaxy.job.elastic.GalaxySimpleJob
+      cron: 0/5 * * * * ?
+      sharding-total-count: 1
+      sharding-item-parameters:
+
