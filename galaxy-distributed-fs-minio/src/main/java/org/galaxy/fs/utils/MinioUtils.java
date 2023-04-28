@@ -30,8 +30,6 @@ public class MinioUtils {
     @Resource
     private MinioProperties minioProperties;
 
-    private MinioUtils(){}
-
     /**
      * 判断一个bucket是否存在
      * @param bucketName  bucket名称
